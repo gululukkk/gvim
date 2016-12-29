@@ -84,12 +84,13 @@ syntax enable
 
 "vim按键映射
 inoremap <m-k> <up>
-inoremap <m-j> <down>	
+inoremap <m-j> <down>
 inoremap <m-l> <right>
 inoremap <m-h> <left>
 inoremap <esc> <Esc>:w<cr> "插入模式自动保存
 inoremap <c-cr> <esc>O
 inoremap <s-cr> <esc>o
+inoremap <cr> <cr><cr><up><tab>
 nnoremap <cr> :w<cr>	"普通模式自动保存
 nnoremap <tab> :bn<cr>	"tab键切换buffer
 nnoremap <silent><F5> :source $VIM/_vimrc<cr>	"f5刷新配置文件
@@ -111,6 +112,8 @@ set backupext=.bak
 set backupdir=c:/vimrc_bak
 "设置vim缩进和行号
 set expandtab
+"解决<bs>键无法删除的问题
+set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
