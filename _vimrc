@@ -87,7 +87,7 @@ inoremap <m-k> <up>
 inoremap <m-j> <down>	
 inoremap <m-l> <right>
 inoremap <m-h> <left>
-"inoremap <esc> <Esc>:w<cr> "插入模式自动保存
+inoremap <esc> <Esc>:w<cr> "插入模式自动保存
 inoremap <c-cr> <esc>O
 inoremap <s-cr> <esc>o
 nnoremap <cr> :w<cr>	"普通模式自动保存
