@@ -47,6 +47,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 "vim主题
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'crusoexia/vim-dracula'
 call vundle#end()
 filetype plugin indent on
 
@@ -135,8 +136,9 @@ set hidden
 
 "窗口滚动的设置
 set scrolloff=5
-"自动重启gvim
+"自动重载_vimrc
 autocmd! bufwritepost $VIM/_vimrc source %
+autocmd! bufwritepost d:\桌面\vimscript\a.vim source %
 
 
 "显示排版符号
@@ -146,7 +148,6 @@ hi SpecialKey guifg=#00ff00
 
 autocmd GUIEnter * :MRU
 set shortmess=atI
-
 "我的vimscript脚本练习
 inoremap <CR> <C-R>=Mylrh()<CR>
 
