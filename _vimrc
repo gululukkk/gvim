@@ -41,12 +41,13 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'othree/html5.vim'
 "大神推荐的插件
 Plugin 'hail2u/vim-css3-syntax'
-"Plugin 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'ctrlpvim/ctrlp.vim'
 "vim主题
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'crusoexia/vim-dracula'
 call vundle#end()
 filetype plugin indent on
 
@@ -133,8 +134,9 @@ set hidden
 
 "窗口滚动的设置
 set scrolloff=5
-"自动重启gvim
+"自动重载_vimrc
 autocmd! bufwritepost $VIM/_vimrc source %
+autocmd! bufwritepost d:\桌面\vimscript\a.vim source %
 
 
 "显示排版符号
@@ -144,7 +146,5 @@ hi SpecialKey guifg=#00ff00
 
 autocmd GUIEnter * :MRU
 
-
-
-
-
+"学习vimscript的设置
+nnoremap <F7> :source d:\桌面\vimscript\a.vim<cr>
