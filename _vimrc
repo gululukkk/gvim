@@ -39,9 +39,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 "html5标签自动缩进
 Plugin 'othree/html5.vim'
-"大神推荐的插件
 Plugin 'hail2u/vim-css3-syntax'
-"Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'ctrlpvim/ctrlp.vim'
 "vim主题
@@ -94,6 +94,7 @@ inoremap <c-cr> <esc>O
 inoremap <s-cr> <esc>o
 inoremap <c-j> <esc>:source d:\desktop\a.vim<cr>
 inoremap <m-d> console.log()<left>
+inoremap <silent><m-;> <esc>$a;
 nnoremap <c-j> :source d:\desktop\a.vim<cr>
 nnoremap <cr> :w<cr>	"普通模式自动保存
 nnoremap <tab> :bn<cr>	"tab键切换buffer
@@ -148,15 +149,3 @@ hi SpecialKey guifg=#00ff00
 
 autocmd GUIEnter * :MRU
 set shortmess=atI
-"我的vimscript脚本练习
-inoremap <CR> <C-R>=Mylrh()<CR>
-
-
-function! Mylrh()
-    let charr = strpart(getline('.'), col('.')-1, 1)
-    let charl = strpart(getline('.'), col('.')-2, 1)
-    if (charr == '}' && charl == '{')
-        return "\<CR>\<ESC>O"
-    endif
-    return "\<CR>"
-endfunction
